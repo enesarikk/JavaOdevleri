@@ -1,16 +1,16 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        double price, KDVrate=0.18, KDVprice, KDVwprice;
+        double price, rate, KDVrate1=0.18, KDVrate2 = 0.08, KDVprice, KDVwprice;
         Scanner inp = new Scanner(System.in);
-        System.out.print("Ürünün fiyatını giriniz :");
+        System.out.print("Ürünün fiyatını giriniz : ");
         price = inp.nextDouble();
-        KDVprice = price * KDVrate;
+        rate = (price > 0 && price <= 1000) ? KDVrate1 : KDVrate2;
+        KDVprice = price * rate;
         KDVwprice = price + KDVprice;
         System.out.println("KDV'siz fiyatı : " + price);
-        System.out.println("KDV oranı : " + KDVrate);
+        System.out.println("KDV oranı : " + rate);
         System.out.println("KDV fiyatı : " + KDVprice);
         System.out.println("KDV'li fiyatı : " + KDVwprice);
-
     }
 }
