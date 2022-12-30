@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int f, c, totalF = 1, totalC = 1, totalFC = 1, result;
+        int f, c, totalF = 1, totalC = 1, totalFC = 1;
 
         Scanner scan = new Scanner(System.in);
 
